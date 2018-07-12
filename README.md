@@ -11,20 +11,25 @@ Pour éviter des problèmes avec l'intigrité des données gérées, les relatio
 
 Premièrement, tous les élèves, enseignants, parents, membres d’association sont des _personnes_. Tous leurs données générique pour une personne sont enrégistrées dans le tableau **Personnes**. 
 
- **Personnes**: PersonneID | Nom | Prénom | DateDeNaissance | Genre
+  **Personnes**: PersonneID | Nom | Prénom | DateDeNaissance | Genre
 
 Secondairement, toutes personnes ont une ou plusieurs roles par rapport à l’association, l’école et dans leur réseaux familial, par exemple parent, élève, tuteur, etc. qui peuvent aussi changer avec temps. Ces informations sont enrégistrées dans des tableaux avec noms commençant sur Est<Role>. 
 
-> **EstElève**: PersonneID | DateArivée | DateParti
-> **EstEnseignant**
-> **EstMembreAssociation**
-> **EstParentDe**
-> **EstTuteurDe**
-> **EstPartenaireDe**
+ **EstElève**: PersonneID | DateArivée | DateParti 
+ 
+ **EstEnseignant** 
+ 
+ **EstMembreAssociation** 
+ 
+ **EstParentDe**
+ 
+ **EstTuteurDe**
+ 
+ **EstPartenaireDe**
 
-Notes: 
-- Le tableau **EstParentDe** contient aussi l'information qui est enfant de qui, donc il n'existe pas un autre tableau pour cette information!)
-- Le tableau **EstPartenaireDe** enrégistre toute histoire d'une relation, en prenant un enregistrement chaque fois que l'état de la relation change, disant l'attribute "status" peut prendre les valeurs: partenaire, marié, séparé, divorcé.
+> Notes: 
+> - Le tableau **EstParentDe** contient aussi l'information qui est enfant de qui, donc il n'existe pas un autre tableau pour > cette information!)
+> - Le tableau **EstPartenaireDe** enrégistre toute histoire d'une relation, en prenant un enregistrement chaque fois que l'état de la relation change, disant l'attribute "status" peut prendre les valeurs: partenaire, marié, séparé, divorcé.
 
 ### Ménages - gestion des "famillies" et leurs addresses
 Chaque personne est membre de au moins un ménage, le ménage ou il ou elle habite premièrement. Secondairement, des enfants peuvent être liées a plusieurs ménages, dans le cas ou des parents sont séparées. 
